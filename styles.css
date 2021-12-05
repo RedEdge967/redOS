@@ -1,0 +1,768 @@
+/* Body */
+body {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: calc(100vh - 35px);
+    overflow: hidden;
+    user-select: none;
+    font-family: Nunito, sans-serif;
+    background-color: #00adef;
+    /* background: url("https://image.freepik.com/free-photo/blurred-shiny-light-background_23-2148133082.jpg"); */
+    background-size: 100%;
+  }
+  .body-background-color {
+    background: #1073aa; /* fallback for old browsers */
+  }
+  
+  /* Logon */
+  #logon {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  #username {
+    padding: 3px;
+    width: 200px;
+    height: 20px;
+    opacity: 0.8;
+    border: 1.5px solid lightgrey;
+  }
+  #username:focus {
+    outline: none;
+  }
+  #username:focus::placeholder {
+    color: transparent;
+  }
+  #logon p:nth-child(3) {
+    font-size: 75%;
+    opacity: 0.6;
+  }
+  
+  /* Greeting */
+  @keyframes greeting {
+    from {
+      color: transparent;
+    }
+    to {
+      color: white;
+    }
+  }
+  #greeting {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 120%;
+    animation-name: greeting;
+    animation-duration: 5s;
+    color: white;
+  }
+  
+  /* Programs on the desktop */
+  #desktop-programs-column {
+    display: inline-block;
+    margin: 10px;
+    zoom: 100%;
+  }
+  .desktop-programs {
+    display: block;
+    padding: 3px 15px;
+    width: 48px;
+    height: 70px;
+  }
+  .desktop-programs:hover {
+    background-color: #a8d6f5;
+  }
+  .desktop-icon-programs {
+    width: 47px;
+    height: 47px;
+    margin : 5px;
+  }
+  .desktop-title-programs {
+    margin: 2px;
+    font-size: 80%;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+  #desktop-title-recycle-bin {
+    position: relative;
+    left: -20%;
+    width: 100px;
+    font-size: 75%;
+  }
+  #desktop-computer {
+    position: relative;
+    bottom: -10px;
+  }
+  #desktop-title-computer {
+    position: relative;
+    /*left: -10%;*/
+    margin: initial;
+  }
+  
+  /* Desktop menu */
+  #desktop-menu {
+    position: absolute;
+    width: 140px;
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+  }
+  .desktop-menu-functions {
+    margin-bottom: 2px;
+    padding: 3px;
+    font-size: 80%;
+    white-space: pre;
+  }
+  .desktop-menu-functions:hover {
+    background-color: #dddddd;
+  }
+  #desktop-menu hr {
+    width: 130px;
+    border: 0.5px solid silver;
+  }
+  #personalize-image {
+    position: relative;
+    bottom: -1px;
+    transform: rotate(10deg);
+    width: 13px;
+    height: 12px;
+  }
+  
+  /* Personalize */
+  #personalize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 287px;
+  }
+  #personalize-content {
+    position: relative;
+    top: -5px;
+    margin: 10px 0 0 5px;
+    padding-left: 10px;
+    width: 269px;
+    height: 250px;
+  }
+  .background-colors {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.1s;
+    border: none;
+  }
+  .background-colors:hover {
+    position: relative;
+    top: -1.5px;
+    border: 1.5px solid #505050;
+  }
+  .background-colors:active {
+    transform: scale(1.1, 0.9);
+  }
+  .background-colors:focus {
+    outline: none;
+  }
+  .background-selected {
+    position: relative;
+    top: -1.5px;
+    border: 1.5px solid #505050;
+  }
+  #personalize-second-line {
+    margin-top: 1px;
+  }
+  #background-lilac {
+    background-color: #df7cf1;
+  }
+  #background-pink {
+    background-color: #f17ca6;
+  }
+  #background-red {
+    background-color: #f17c7c;
+  }
+  #background-orange {
+    background-color: #f1b27c;
+  }
+  #background-orange-yellow {
+    background-color: #f1ca7c;
+  }
+  #background-yellow {
+    background-color: #f1dc7c;
+  }
+  #background-lime {
+    background-color: #c1f17c;
+  }
+  #background-green {
+    background-color: #7cf17d;
+  }
+  #background-green-cyan {
+    background-color: #7cf1bc;
+  }
+  #background-cyan {
+    background-color: #7cf1e8;
+  }
+  #background-blue {
+    background-color: #7cc2f1;
+  }
+  #background-blue-violet {
+    background-color: #7c84f1;
+  }
+  #background-violet {
+    background-color: #a17cf1;
+  }
+  #background-grey {
+    background-color: #b8b8b8;
+  }
+  #select-theme {
+    display: inline-block;
+    position: relative;
+    padding: 1px;
+    width: 147px;
+    border: 1px solid grey;
+  }
+  #select-theme:focus {
+    outline: none;
+  }
+  
+  /* Menu */
+  #menu {
+    position: absolute;
+    bottom: 0;
+    z-index: 101;
+    padding: 8px;
+    width: 250px;
+    height: 400px;
+    background-color: #101010;
+  }
+  #menu-content {
+    font-size: 90%;
+    background-color: #252525;
+  }
+  .menu-programs:hover {
+    background-color: #303030;
+  }
+  .menu-images {
+    position: relative;
+    bottom: -9px;
+    margin-left: 3px;
+    width: 30px;
+    height: 30px;
+  }
+  .menu-titles {
+    display: inline-block;
+    position: relative;
+    top: -1.5px;
+    margin-left: 4px;
+    font-size: 85%;
+    color: white;
+  }
+  
+  /* More datetime */
+  #datetime-more {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 5px;
+    z-index: 101;
+    padding: 8px;
+    width: 120px;
+    height: 65px;
+    text-align: center;
+    font-family: Nunito, sans-serif;
+    color: white;
+    background-color: #101010;
+  }
+  .exact-time,
+  .day {
+    position: relative;
+    top: -13px;
+  }
+  
+  /* Taskbar */
+  #taskbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    z-index: 102;
+    background-color: #101010;
+  }
+  #start-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 156%;
+    color: white;
+  }
+  #start-button:hover {
+    background-color: #272727;
+  }
+  #start-button:active {
+    background-color: #202020;
+  }
+  
+  /* Datetime */
+  #datetime {
+    display: flex;
+    float: right;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0 8px;
+    font-size: 70%;
+    color: white;
+  }
+  #datetime:hover {
+    background-color: #272727;
+  }
+  #datetime:active {
+    background-color: #202020;
+  }
+  .time {
+    position: relative;
+    top: -10px;
+  }
+  .date {
+    position: relative;
+    top: -30px;
+  }
+  
+  /* About */
+  #about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 287px;
+  }
+  #about-content {
+    margin: 10px 0 0 5px;
+    padding-left: 10px;
+    width: 280px;
+    height: 250px;
+    overflow-y: scroll;
+  }
+  .about-containers {
+    margin-bottom: 30px;
+  }
+  #about header {
+    font-size: 130%;
+    text-align: center;
+  }
+  #about li {
+    line-height: 16pt;
+  }
+  .about-indents {
+    margin-left: 15px;
+    color: #808080;
+  }
+  #about footer {
+    text-align: center;
+    font-size: 70%;
+  }
+  
+  /* Calculator */
+  #calculator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 249px;
+    height: 292px;
+  }
+  #display {
+    margin-top: 10px;
+    padding: 0 3px;
+    width: 243px;
+    font-size: 130%;
+    font-family: Nunito, sans-serif;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid #aaaaaa;
+  }
+  #display:focus {
+    outline: none;
+  }
+  #calculation-buttons {
+    margin: 11px 0 0 1px;
+  }
+  .calculator-buttons {
+    display: inline-block;
+    position: relative;
+    right: -3px;
+    margin-top: 3px;
+    width: 45px;
+    height: 40px;
+    text-align: center;
+    text-shadow: 0 0 0 black;
+    background-color: #e1e1e1;
+  }
+  .calculator-buttons:hover {
+    background-color: #d6d6d6;
+  }
+  .calculator-buttons:active {
+    background-color: #c5c5c5;
+  }
+  .calculator-buttons span {
+    vertical-align: -9px;
+  }
+  .dark-calculator-buttons {
+    background-color: #cccccc;
+  }
+  .dark-calculator-buttons:hover {
+    background-color: #bcbcbc;
+  }
+  .dark-calculator-buttons:active {
+    background-color: #a6a6a6;
+  }
+  #window-calculator-fifth-line {
+    position: relative;
+    bottom: -0.5px;
+  }
+  #equal-button {
+    position: relative;
+    left: -4.5px;
+    margin-top: 3px;
+    width: 93.5px;
+    height: 40px;
+    float: right;
+    text-align: center;
+    background-color: #20c5d9;
+  }
+  #equal-button:hover {
+    background-color: #1eb5c8;
+  }
+  #equal-button:active {
+    background-color: #1ca9ba;
+  }
+  #equal-button span {
+    vertical-align: -10px;
+  }
+  
+  /* Text editor */
+  #text-editor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 400px;
+  }
+  #text-editor-zone {
+    margin: 5px;
+    margin-top: 8px;
+    padding: 3px;
+    padding-right: 3.5px;
+    width: 280.5px;
+    height: 277px;
+    overflow-y: scroll;
+    user-select: auto;
+    font-family: Arial;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid grey;
+  }
+  #text-editor-zone:focus {
+    outline: none;
+  }
+  #undo-button,
+  #redo-button {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    margin-left: 2px;
+    padding: 0px 8px;
+    height: 20px;
+    font-family: sans-serif;
+  }
+  #undo-button:hover,
+  #redo-button:hover {
+    background-color: #dddddd;
+  }
+  #undo-button:active,
+  #redo-button:active {
+    background-color: #cccccc;
+  }
+  #redo-button {
+    position: relative;
+    left: -4px;
+  }
+  #text-editor-functions {
+    margin: 5px 0 0 6px;
+  }
+  #text-editor-first-line {
+    margin-top: -3px;
+  }
+  #text-editor-second-line {
+    margin-top: 4px;
+  }
+  #text-editor-third-line {
+    margin-top: 3.5px;
+  }
+  .style-buttons {
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    border: none;
+  }
+  .style-buttons:hover {
+    background-color: #c4e3f8;
+  }
+  .style-buttons:active {
+    background-color: #a9d6f4;
+  }
+  .style-buttons:focus {
+    outline: none;
+  }
+  #bold-button {
+    font-weight: bold;
+  }
+  #italic-button {
+    font-style: italic;
+  }
+  #underline-button {
+    text-decoration: underline;
+  }
+  #line-through-button {
+    text-decoration: line-through;
+  }
+  #sup-button,
+  #sub-button {
+    font-size: 70%;
+  }
+  #sup-button sup {
+    font-size: 65%;
+  }
+  #sub-button sub {
+    font-size: 65%;
+  }
+  #sub-button {
+    position: relative;
+    top: -0.5px;
+  }
+  #fonts-list {
+    width: 131px;
+    border: 1px solid grey;
+  }
+  #fonts-list:focus {
+    outline: none;
+  }
+  option[value="Arial"] {
+    font-family: Arial;
+  }
+  option[value="Calibri"] {
+    font-family: Calibri;
+  }
+  option[value="Cambria"] {
+    font-family: Cambria;
+  }
+  option[value="Comic Sans MS"] {
+    font-family: "Comic Sans MS";
+  }
+  option[value="Georgia"] {
+    font-family: Georgia;
+  }
+  option[value="Impact"] {
+    font-family: Impact;
+  }
+  option[value="Nunito"] {
+    font-family: Nunito;
+  }
+  option[value="Tahoma"] {
+    font-family: Tahoma;
+  }
+  option[value="Times New Roman"] {
+    font-family: "Times New Roman";
+  }
+  option[value="Verdana"] {
+    font-family: Verdana;
+  }
+  #text-editor-second-line span {
+    position: relative;
+    bottom: -0.5px;
+    font-size: 85%;
+  }
+  #text-editor-color {
+    width: 26px;
+    height: 15px;
+    background-color: white;
+    border: 1px solid grey;
+  }
+  #text-editor-color:focus {
+    outline: none;
+  }
+  #text-editor-second-line span:nth-child(3) {
+    margin-left: 10px;
+  }
+  #text-editor-background {
+    width: 26px;
+    height: 15px;
+    background-color: white;
+    border: 1px solid grey;
+  }
+  #text-editor-background:focus {
+    outline: none;
+  }
+  #text-editor-size {
+    position: relative;
+    bottom: -0.5px;
+    width: 85.8px;
+    height: 19px;
+    border: 1px solid grey;
+  }
+  #text-editor-size:focus {
+    outline: none;
+  }
+  #unordered-list-button,
+  #ordered-list-button {
+    width: 40px;
+    height: 19px;
+    opacity: 0.7;
+    background-color: white;
+    border: 1px solid grey;
+  }
+  #unordered-list-button:hover,
+  #ordered-list-button:hover {
+    background-color: #c4e3f8;
+  }
+  #unordered-list-button:active,
+  #ordered-list-button:active {
+    background-color: #a9d6f4;
+  }
+  #unordered-list-button,
+  #ordered-list-button:focus {
+    outline: none;
+  }
+  #unordered-list-button {
+    margin-left: 5px;
+  }
+  #ordered-list-button {
+    margin-right: 10px;
+    padding-right: 5px;
+  }
+  #text-editor-between-line {
+    position: relative;
+    right: -1.5px;
+    bottom: -1px;
+    width: 1px;
+    height: 12px;
+    border: 0.5px solid grey;
+  }
+  .align-buttons {
+    width: 40.3px;
+    height: 19px;
+    opacity: 0.7;
+    background-color: white;
+    border: 1px solid grey;
+  }
+  .align-buttons:hover {
+    background-color: #c4e3f8;
+  }
+  .align-buttons:active {
+    background-color: #a9d6f4;
+  }
+  .align-buttons:focus {
+    outline: none;
+  }
+  .align-images {
+    width: 10px;
+    height: 10px;
+  }
+  #align-left-button {
+    margin: 5px 0 0 16px;
+  }
+  
+  /* Windows */
+  .windows {
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+  }
+  .window-titles {
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    margin-left: 3px;
+    font-size: 80%;
+  }
+  
+  /* Decorated scrollbars */
+  .decorated-scrollbars::-webkit-scrollbar {
+    width: 5px;
+  }
+  .decorated-scrollbars::-webkit-scrollbar-track {
+    background-color: #d4d4d4;
+  }
+  .decorated-scrollbars::-webkit-scrollbar-thumb {
+    background-color: #505050;
+  }
+  
+  /* Close buttons */
+  .close-buttons {
+    position: relative;
+    right: -0.5px;
+    padding: 0 8px;
+    float: right;
+    font-size: 110%;
+    transition: background-color 0.1s;
+    font-family: "Times New Roman";
+    font-weight: bold;
+  }
+  .close-buttons:hover {
+    color: white;
+    background-color: #e81123;
+  }
+  .close-buttons:active {
+    background-color: #f1707a;
+  }
+  .close-button-contents {
+    display: inline-block;
+    margin: 0;
+  }
+  
+  /* Font sizes */
+  .font-sizes-85 {
+    font-size: 85%;
+  }
+  .font-sizes-120 {
+    font-size: 120%;
+  }
+  
+  .clock {
+    width: 10rem;
+    height: 10rem;
+    border: 15px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    float: right;
+    padding: 3rem;
+    margin-right: 5rem;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+      inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+  }
+  
+  .hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  
